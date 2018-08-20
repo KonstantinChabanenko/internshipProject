@@ -1,0 +1,23 @@
+@media (min-width: 769px) {
+  #toggleMenu, #search-icon-mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .nav-wrapper {
+    display: none;
+  }
+  #toggleMenu, #search-icon-mobile, #mini-cart, #wishlist {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #search {
+    display: none;
+  }
+  #logo-wrapper, #main-menu-wrapper {
+    width: 90%;
+    justify-content: space-between;
+  }
+}

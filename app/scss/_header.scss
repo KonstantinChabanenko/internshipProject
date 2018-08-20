@@ -1,0 +1,210 @@
+@import 'normalize',
+        'functions',
+        'mixins',
+        'media';
+
+// --------VARIABLES-------- //
+$color: #242424;
+$font-family: 'Allerta Stencil', Arial, sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+$line-height: 25px;
+// --------/VARIABLES-------- //
+
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+// --------MAIN STYLES------- //
+body {
+  color: $color;
+  font: $font-weight $font-size/$line-height $font-family;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+input {
+  font-style: normal;
+}
+// --------/MAIN STYLES------- //
+
+// --------HEADER--------- //
+.main-header {
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+//-------------LOGO------------ //
+.logo {
+  flex: 1 45px;
+  background-color: #242424;
+  display: flex;
+}
+
+.logo-wrapper {
+  width: px-to-pc(720px, 1400px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  // ---------------------Logo text
+  a {
+    color: #57c5a0;
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.65px;
+    align-self: center;
+  }
+  // ------------------SEARCH
+  .search {
+    @include search(#b1aeae);
+    margin-left: auto;
+    position: relative;
+    border-left: 2px double #393939;
+    position: relative;
+    form {
+      height: 100%;
+      display: flex;
+      padding-left: px-to-pc(18px, 1400px);
+      padding-right: px-to-pc(23px, 1400px);
+    }
+    // ---------------SEARCH BOX
+    &-box {
+      background-color: #242424;
+      border: none;
+    }
+    // ---------------/SEARCH BOX
+    // ---------------FORM SUBMIT BUTTON
+    &-btn {
+      background-color: #242424;
+      font-family: 'icomoon' !important;
+      color: #7e7e7e;
+      border: none;
+    }
+    // ---------------FORM SUBMIT BUTTON
+    // ---------------DROP DOWN LIST FOR SEARCH BOX
+    .drop-down-search {
+      box-sizing: content-box;
+      position: absolute;
+      left: -2px;
+      background-color: #4c4c4c;
+      min-height: 76px;
+      width: 100%;
+      border-left: 2px solid #4c4c4c;
+      border-right: 1px solid #818181;
+      display: flex;
+      ul {
+        flex: 1;
+      }
+      li {
+        display: block;
+        height: 50%;
+        &:first-child {
+          border-bottom: 1px solid #666464;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include search(#aaaaaa);
+        padding-left: 18px;
+      }
+    }
+    // ---------------/DROP DOWN LIST FOR SEARCH BOX
+  }
+  // ------------------/SEARCH
+  // ---------------------/Logo text
+  //---------------Sign up BUTTON
+  .btn {
+    background-color: #242424;
+    color: #7e7e7e;
+    font-size: 11px;
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+    border-top: none;
+    border-bottom: none;
+    align-self: stretch;
+  }
+  //---------------/Sign up BUTTON
+}
+//-------------/LOGO------------ //
+
+// ---------------NAVIGATION MENU, WISHLIST AND MIM-CART--------------------- //
+.main-menu {
+  flex: 1 60px;
+  display: flex;
+}
+
+.main-menu-wrapper {
+  width: px-to-pc(720px, 1400px);
+  margin: 0 auto;
+  display: flex;
+  //-------------NAVIGATION MENU
+  nav.main-nav {
+    display: flex;
+    height: 100%;
+    //------NAVIGATION MENU ITEMS
+    a {
+      margin-right: -1px;
+      display: flex;
+      padding: 0 px-to-pc(23px, 550px);
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+    }
+    //------/NAVIGATION MENU ITEMS
+  }
+  //-------------/NAVIGATION MENU
+  //---------------WISHLIST
+  .wishlist {
+    margin-left: auto;
+    padding-left: px-to-pc(12px, 1400px);
+    padding-right: px-to-pc(21px, 1400px);
+    @include commonStyles;
+  }
+  //---------------/WISHLIST
+  //---------------MINI-CART
+  .mini-cart {
+    margin-left: -1px;
+    padding-left: px-to-pc(22px, 1400px);
+    padding-right: px-to-pc(24px, 1400px);
+    @include commonStyles;
+  }
+  //---------------/MINI-CART
+}
+//---------------/NAVIGATION MENU, WISHLIST AND MIM-CART---------------------//
+
+// -----------------MOBILE VERSION-------------------//
+.main-menu-wrapper {
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+.toggleMenu, .search-icon-mobile {
+  flex: 1;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+// -----------------/MOBILE VERSION-------------------//
+
+// --------/HEADER--------- //
