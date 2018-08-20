@@ -750,31 +750,6 @@ th {
     width: 90%;
     justify-content: space-between; } }
 
-* {
-  box-sizing: border-box;
-  margin: 0 0;
-  padding: 0 0; }
-
-body {
-  color: #242424;
-  font: 400 0.64 "Allerta Stencil", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; }
-
-a {
-  text-decoration: none; }
-
-li {
-  list-style-type: none; }
-
-:active, :hover, :focus {
-  outline: 0;
-  outline-offset: 0; }
-
-input {
-  font-style: normal; }
-
 .main-header {
   min-height: 105px;
   display: flex;
