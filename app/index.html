@@ -4,9 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -14,16 +15,16 @@
   <script src="js/main-js.js">
 </head>
 <body>
-<header class="main-header">
-  <div class="logo">
-    <div class="logo-wrapper" id="logo-wrapper">
-      <a href="#">FooseShoes</a>
-      <div class="search" id="search">
+<header id="main-header">
+  <div id="logo">
+    <div class="container">
+      <a href="#" id="logotype">FooseShoes</a>
+      <div id="search">
         <form action="#" method="get">
-          <input type="search" placeholder="SEARCH" class="search-box">
-          <input type="submit" value="&#xe904;" class="search-btn">
+          <input type="search" placeholder="SEARCH" id="search-box">
+          <input type="submit" value="&#xe904;" id="search-btn">
         </form>
-        <div class="drop-down-search">
+        <div id="drop-down-search">
           <ul>
             <li><a href="#">Men Shoes</a></li>
             <li><a href="#">Kids</a></li>
@@ -33,31 +34,31 @@
       <button class="btn">LOGIN or REGISTER</button>
     </div>
   </div>
-  <div class="main-menu">
-    <div class="main-menu-wrapper" id="main-menu-wrapper">
-      <div class="nav-wrapper">
-        <nav class="main-nav" id="main-nav">
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">About</a>
-          <a href="#">Pages</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
+  <div id="main-menu">
+    <div class="container">
+      <!--<div id="nav-wrapper">-->
+        <nav id="main-nav">
+          <a href="#" class="container-item">Home</a>
+          <a href="#" class="container-item">Products</a>
+          <a href="#" class="container-item">About</a>
+          <a href="#" class="container-item">Pages</a>
+          <a href="#" class="container-item">Blog</a>
+          <a href="#" class="container-item">Contact</a>
         </nav>
-      </div>
-      <div class="toggleMenu" id="toggleMenu">
+      <!--</div>-->
+      <div id="toggleMenu" class="container-item">
         <input type="checkbox" id="menu">
         <label for="menu"><img src="icons/menu53.png"></label>
       </div>
-      <div class="search-icon-mobile" id="search-icon-mobile">
+      <div id="search-icon-mobile" class="container-item">
         <input type="checkbox" id="search">
         <label for="search" class="icon-Search_Icon"></label>
       </div>
-      <div class="wishlist" id="wishlist">
+      <div id="wishlist" class="container-item">
         <span class="icon-Star_Icon"></span>
         <div>30</div>
       </div>
-      <div class="mini-cart" id="mini-cart">
+      <div id="mini-cart" class="container-item">
         <span class="icon-Cart_Icon"></span>
         <div>0</div>
       </div>

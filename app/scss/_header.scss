@@ -1,168 +1,185 @@
-@import 'normalize',
-        'functions',
-        'mixins',
-        'media';
-
-
-
-// --------HEADER--------- //
-.main-header {
-  min-height: 105px;
-  display: flex;
-  flex-direction: column;
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 
-//-------------LOGO------------ //
-.logo {
-  flex: 1 45px;
+//=============LOGO=============//
+#logo {
   background-color: #242424;
+  min-height: 45px;
+}
+#logo .container {
+  min-height: 45px;
   display: flex;
+  flex-direction: row;
 }
 
-.logo-wrapper {
-  width: px-to-pc(940px, 1400px);
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  // ---------------------Logo text
-  a {
-    color: #57c5a0;
-    font-size: 26px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: -0.65px;
-    align-self: center;
-  }
-  // ------------------SEARCH
-  .search {
-    @include search(#b1aeae);
-    margin-left: auto;
-    position: relative;
-    border-left: 2px double #393939;
-    position: relative;
-    form {
-      height: 100%;
-      padding: 0 10%;
-      display: flex;
-    }
-    // ---------------SEARCH BOX
-    &-box {
-      background-color: #242424;
-      border: none;
-    }
-    // ---------------/SEARCH BOX
-    // ---------------FORM SUBMIT BUTTON
-    &-btn {
-      background-color: #242424;
-      font-family: 'icomoon' !important;
-      color: #7e7e7e;
-      border: none;
-    }
-    // ---------------FORM SUBMIT BUTTON
-    // ---------------DROP DOWN LIST FOR SEARCH BOX
-    .drop-down-search {
-      box-sizing: content-box;
-      position: absolute;
-      left: -2px;
-      background-color: #4c4c4c;
-      min-height: 76px;
-      width: 100%;
-      border-left: 2px solid #4c4c4c;
-      border-right: 1px solid #818181;
-      display: flex;
-      ul {
-        flex: 1;
-      }
-      li {
-        display: block;
-        height: 50%;
-        &:first-child {
-          border-bottom: 1px solid #666464;
-        }
-      }
-      a {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        @include search(#aaaaaa);
-        padding-left: 18px;
-      }
-    }
-    // ---------------/DROP DOWN LIST FOR SEARCH BOX
-  }
-  // ------------------/SEARCH
-  // ---------------------/Logo text
-  //---------------Sign up BUTTON
-  .btn {
-    background-color: #242424;
-    color: #7e7e7e;
-    font-size: 11px;
-    border-left: 1px solid #393939;
-    border-right: 1px solid #393939;
-    border-top: none;
-    border-bottom: none;
-    align-self: stretch;
-  }
-  //---------------/Sign up BUTTON
+//=======Style for "FooseShoes=======//
+#logotype {
+  color: #57c5a0;
+  font-family: "ST Heiti SC";
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: -0.65px;
+  align-self: center;
 }
-//-------------/LOGO------------ //
-
-// ---------------NAVIGATION MENU, WISHLIST AND MIM-CART--------------------- //
-.main-menu {
-  flex: 1 60px;
-  display: flex;
-}
-
-.main-menu-wrapper {
-  width: px-to-pc(940px, 1400px);
-  margin: 0 auto;
-  display: flex;
-  //-------------NAVIGATION MENU
-  nav.main-nav {
-    display: flex;
+//=======/Style for "FooseShoes=======//
+#search {
+  margin-left: auto;
+  border-left: 2px double #393939;
+  position: relative;
+  form {
     height: 100%;
-    //------NAVIGATION MENU ITEMS
-    a {
-      margin-right: -1px;
-      display: flex;
-      padding: 0 px-to-pc(23px, 720px);
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      border-left: 1px solid #cccccc;
-      border-right: 1px solid #cccccc;
-    }
-    //------/NAVIGATION MENU ITEMS
+    display: flex;
+    align-items: center;
   }
-  //-------------/NAVIGATION MENU
-  //---------------WISHLIST
-  .wishlist {
-    margin-left: auto;
-    padding: 0 px-to-pc(23px, 720px);
-    @include commonStyles;
-  }
-  //---------------/WISHLIST
-  //---------------MINI-CART
-  .mini-cart {
-    margin-left: -1px;
-    padding: 0 px-to-pc(23px, 720px);
-    @include commonStyles;
-  }
-  //---------------/MINI-CART
 }
-//---------------/NAVIGATION MENU, WISHLIST AND MIM-CART---------------------//
 
-// -----------------MOBILE VERSION-------------------//
-.main-menu-wrapper {
-  input[type="checkbox"] {
+#search-box {
+color: #b1aeae;
+font-family: "Myriad Pro";
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+text-transform: uppercase;
+letter-spacing: 1.2px;
+background-color: inherit;
+border: none;
+width: 80%;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+#search-btn {
+  margin-right: 5%;
+  background-color: inherit;
+  border: none;
+  color: #b1aeae;
+  font-family: 'icomoon' !important;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn {
+  padding: 0 .5rem;
+  align-self: stretch;
+  background-color: inherit;
+  border: 1px solid #393939;
+  border-top: none;
+  border-bottom: none;
+  color: #7e7e7e;
+  font-size: 11px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#drop-down-search {
+  box-sizing: content-box;
+  position: absolute;
+  left: -2px;
+  background-color: #4c4c4c;
+  min-height: 76px;
+  width: 100%;
+  border-left: 2px solid #4c4c4c;
+  border-right: 1px solid #393939;
+  display: flex;
+  ul {
+    flex: 1;
+  }
+  li {
+    display: block;
+    height: 50%;
+    &:first-child {
+      border-bottom: 1px solid #666464;
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #aaaaaa;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: "Myriad Pro";
+    padding-left: 18px;
+  }
+}
+//=============/LOGO=============//
+
+//============NAVIGATION===========//
+#main-menu .container {
+  input[type=checkbox] {
     display: none;
   }
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
 }
-.toggleMenu, .search-icon-mobile {
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-}
-// -----------------/MOBILE VERSION-------------------//
 
-// --------/HEADER--------- //
+.container-item {
+  border-left: 1px solid #393939;
+  border-right: 1px solid #393939;
+  margin-right: -1px;
+}
+
+#mini-cart {
+  margin-right: 0;
+}
+
+#main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  a {
+    color: #242424;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .5rem;
+  }
+}
+
+#wishlist {
+  margin-left: auto;
+}
+
+#wishlist, #mini-cart {
+  padding: 0 .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div {
+    display: inline-block;
+    background-color: #adadad;
+    width: 20px;
+    height: 20px;
+    border-radius: 25%;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 8px;
+    color: #fff;
+    font-size: 12px;
+    &:hover {
+      background-color: #57c5a0;
+      cursor: pointer;
+    }
+  }
+}
+
+#toggleMenu, #search-icon-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//============/NAVIGATION===========//

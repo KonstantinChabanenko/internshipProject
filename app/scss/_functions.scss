@@ -1,3 +1,0 @@
-@function px-to-pc($target, $context) {
-  @return ($target / $context) * 100%;
-}

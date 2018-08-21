@@ -1,16 +1,6 @@
-@import 'normalize',
-        'functions',
-        'mixins',
-        'media',
-        'header';
+@import 'header',
+        'media';
 
-// --------VARIABLES-------- //
-$color: #242424;
-$font-family: 'Allerta Stencil', Arial, sans-serif;
-$font-size: 16px;
-$font-weight: 400;
-$line-height: 25px;
-// --------/VARIABLES-------- //
 
 * {
   box-sizing: border-box;
@@ -20,8 +10,8 @@ $line-height: 25px;
 
 // --------MAIN STYLES------- //
 body {
-  color: $color;
-  font: $font-weight $font-size/$line-height $font-family;
+  color: #242424;
+  font-family: 'Allerta Stencil', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
