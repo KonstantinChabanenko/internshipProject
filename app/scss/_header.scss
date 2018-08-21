@@ -21,7 +21,7 @@
 }
 
 .logo-wrapper {
-  width: px-to-pc(720px, 1400px);
+  width: px-to-pc(940px, 1400px);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -43,9 +43,8 @@
     position: relative;
     form {
       height: 100%;
+      padding: 0 10%;
       display: flex;
-      padding-left: px-to-pc(18px, 1400px);
-      padding-right: px-to-pc(23px, 1400px);
     }
     // ---------------SEARCH BOX
     &-box {
@@ -116,7 +115,7 @@
 }
 
 .main-menu-wrapper {
-  width: px-to-pc(720px, 1400px);
+  width: px-to-pc(940px, 1400px);
   margin: 0 auto;
   display: flex;
   //-------------NAVIGATION MENU
@@ -127,7 +126,7 @@
     a {
       margin-right: -1px;
       display: flex;
-      padding: 0 px-to-pc(23px, 550px);
+      padding: 0 px-to-pc(23px, 720px);
       height: 100%;
       justify-content: center;
       align-items: center;
@@ -140,16 +139,14 @@
   //---------------WISHLIST
   .wishlist {
     margin-left: auto;
-    padding-left: px-to-pc(12px, 1400px);
-    padding-right: px-to-pc(21px, 1400px);
+    padding: 0 px-to-pc(23px, 720px);
     @include commonStyles;
   }
   //---------------/WISHLIST
   //---------------MINI-CART
   .mini-cart {
     margin-left: -1px;
-    padding-left: px-to-pc(22px, 1400px);
-    padding-right: px-to-pc(24px, 1400px);
+    padding: 0 px-to-pc(23px, 720px);
     @include commonStyles;
   }
   //---------------/MINI-CART
@@ -163,7 +160,6 @@
   }
 }
 .toggleMenu, .search-icon-mobile {
-  flex: 1;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }

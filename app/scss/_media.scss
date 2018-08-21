@@ -1,3 +1,5 @@
+@import 'functions';
+
 @media (min-width: 769px) {
   #toggleMenu, #search-icon-mobile {
     display: none;
@@ -12,12 +14,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 0;
   }
   #search {
     display: none;
   }
   #logo-wrapper, #main-menu-wrapper {
-    width: 90%;
+    width: px-to-pc(320px, 443px);
     justify-content: space-between;
   }
 }
